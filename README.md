@@ -26,12 +26,14 @@ In addition, you have the option to specify:
 | Name | Version |
 |------|---------|
 | aws | n/a |
+| aws.master | n/a |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | account\_ids | AWS Account IDs under Auditing for the organization | `list` | `[]` | no |
+| guardduty | Enable/Disables guardduty | `bool` | `true` | no |
 | org\_name | Name for this organization (not actually used in API call) | `any` | n/a | yes |
 | s3\_days\_until\_glacier | How many days before transitioning files to Glacier | `number` | `90` | no |
 
@@ -39,7 +41,10 @@ In addition, you have the option to specify:
 
 | Name | Description |
 |------|-------------|
-| s3\_bucket\_name | n/a |
+| config\_s3\_bucket\_name | n/a |
+| guardduty\_id | n/a |
+| guardduty\_s3\_bucket\_name | n/a |
+| logs\_s3\_bucket\_name | n/a |
 
 <!--- END_TF_DOCS --->
 
