@@ -1,5 +1,6 @@
 resource "aws_lambda_function" "guardduty_notification" {
   count         = var.enable_guardduty_notification ? 1 : 0
+  provider      = aws.master
   filename      = "${path.module}/lambda.zip"
   function_name = "guardduty_notification_lambda"
   role          = aws_iam_role.guardduty_iam_role[0].arn
@@ -19,6 +20,7 @@ resource "aws_lambda_function" "guardduty_notification" {
 
 resource "aws_lambda_permission" "guardduty_notification" {
   count         = var.enable_guardduty_notification ? 1 : 0
+  provider      = aws.master
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.guardduty_notification[0].function_name
   principal     = "events.amazonaws.com"
