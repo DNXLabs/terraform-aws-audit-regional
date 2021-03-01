@@ -28,7 +28,7 @@ variable slack_webhook {
 }
 
 variable event_threshold {
-  default     = "0"
+  default     = 0
   description = "Filtering out events by severity or noisy alerts"
 }
 
