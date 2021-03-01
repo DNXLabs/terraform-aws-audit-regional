@@ -31,3 +31,4 @@ variable event_threshold {
   default     = "0"
   description = "Filtering out events by severity or noisy alerts"
 }
+
