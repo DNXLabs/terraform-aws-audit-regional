@@ -35,12 +35,12 @@ In addition, you have the option to specify:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | account\_ids | AWS Account IDs under Auditing for the organization | `list` | `[]` | no |
+| enable\_guardduty\_notification | Enable/Disables guardduty findings slack notification | `bool` | `false` | no |
+| event\_threshold | Filtering out events by severity or noisy alerts | `number` | `0` | no |
 | guardduty | Enable/Disables guardduty | `bool` | `true` | no |
 | org\_name | Name for this organization (not actually used in API call) | `any` | n/a | yes |
 | s3\_days\_until\_glacier | How many days before transitioning files to Glacier | `number` | `90` | no |
-| enable\_guardduty\_notification | Enable/Disables guardduty findings slack notification | `bool` | false | no |
-| slack\_webhook | Slack webhook which will receive guardduty notification | `string` | n/a | no |
-| event\_threshold | Filtering out events by severity or noisy alerts | `int` | 0 | no |
+| slack\_webhook | Slack webhook which will receive guardduty notification | `string` | `""` | no |
 
 ## Outputs
 
