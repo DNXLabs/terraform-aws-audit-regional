@@ -16,3 +16,18 @@ variable "guardduty" {
   default     = true
   description = "Enable/Disables guardduty"
 }
+
+variable "enable_guardduty_notification" {
+  default     = false
+  description = "Enable/Disables guardduty findings slack notification"
+}
+
+variable slack_webhook {
+  default     = ""
+  description = "Slack webhook which will receive guardduty notification"
+}
+
+variable event_threshold {
+  default     = "0"
+  description = "Filtering out events by severity or noisy alerts"
+}
