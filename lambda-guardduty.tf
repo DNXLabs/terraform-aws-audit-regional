@@ -4,7 +4,7 @@ resource "aws_lambda_function" "guardduty_notification" {
   filename      = "${path.module}/lambda.zip"
   function_name = "guardduty_notification_lambda"
   role          = aws_iam_role.guardduty_iam_role[0].arn
-  handler       = "main.lambda_handler"
+  handler       = "lambda.lambda_handler"
 
   source_code_hash = filebase64sha256("${path.module}/lambda.zip")
 
