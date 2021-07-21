@@ -13,3 +13,11 @@ output "guardduty_s3_bucket_name" {
 output "guardduty_id" {
   value = var.guardduty ? aws_guardduty_detector.master[0].id : ""
 }
+
+output "alb_access_logs_s3_bucket_name" {
+  value = aws_s3_bucket.logs.id
+}
+
+output "alb_access_logs_s3_bucket_arn" {
+  value = aws_s3_bucket.logs.arn
+}
