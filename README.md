@@ -46,6 +46,8 @@ In addition, you have the option to specify:
 
 | Name | Description |
 |------|-------------|
+| alb\_access\_logs\_s3\_bucket\_arn | n/a |
+| alb\_access\_logs\_s3\_bucket\_name | n/a |
 | config\_s3\_bucket\_name | n/a |
 | guardduty\_id | n/a |
 | guardduty\_s3\_bucket\_name | n/a |
